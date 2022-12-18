@@ -16,18 +16,18 @@
                                 { action: "confirm", id: booking.id },
                                 method: :patch,
                                 data: { confirm: "Are you sure you want to confirm?" },
-                                class: "button button-primary" %>
+                                class: "button button-primary my-2" %>
           <%= button_to "Reject booking",
                                 { action: "reject", id: booking.id },
                                 method: :patch,
                                 data: { confirm: "Are you sure you want to reject?" },
-                                class: "button button-primary" %>
+                                class: "button button-primary my-2" %>
         <% else %>
           <%= button_to "Reject booking",
                       { action: "reject", id: booking.id },
                       method: :patch,
                       data: { confirm: "Are you sure you want to reject?" },
-                      class: "button button-primary" %>
+                      class: "button button-primary my-2" %>
         <% end %>
         </div>
     <% end  %>

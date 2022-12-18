@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="map"
+
 export default class extends Controller {
   static values = {
     apiKey: String,
@@ -8,14 +8,16 @@ export default class extends Controller {
   }
 
   connect() {
+    console.log("hello");
     mapboxgl.accessToken = this.apiKeyValue
+    console.log(this.apiKeyValue);
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/mapbox/streets-v10"
+      style: 'mapbox://styles/mapbox/streets-v12'
     })
-    this.#addMarkersToMap()
-    this.#fitMapToMarkers()
+    // this.#addMarkersToMap()
+    // this.#fitMapToMarkers()
   }
 
   #addMarkersToMap() {

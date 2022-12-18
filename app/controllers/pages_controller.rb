@@ -9,9 +9,14 @@ class PagesController < ApplicationController
       @listings = Listing.all.order('created_at DESC').limit(24)
     end
 
-    @listings = Listing.where(category_type: params[:query]) if params[:query].present?
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR location ILIKE :query"
+      @listings = Listing.where(sql_query, query: "%#{params[:query]}%")
+    end
 
-    @listings = Listing.order(params[:order_by] => params[:order]) if params[:order_by].present?
+    # @listings = Listing.where(category_type: params[:query]) if params[:query].present?
+
+    # @listings = Listing.order(params[:order_by] => params[:order]) if params[:order_by].present?
 
   end
 
