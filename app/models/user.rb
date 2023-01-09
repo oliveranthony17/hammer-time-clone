@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy # user's bookings refer to the tools/listings that they have requested/agreed to borrow
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  validates :email, presence: true
+  validates :password, presence: true
 end
