@@ -38,7 +38,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params) # this gets the date
     @booking.listing_id = @listing.id
     @booking.user_id = current_user.id # this works
-    @booking.status = "pending" # this works
+    @booking.status = "pending" # this works :)
     authorize @booking
     # raise
     if @booking.save
