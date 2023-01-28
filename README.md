@@ -2,7 +2,7 @@
 
 <h2>IT'S HAMMER TIME!! 🛠</h2>
 
-<a href="https://itshammertime.herokuapp.com/" target="_blank">Click here to view the app!</a>
+<a href="https://hammer-time.herokuapp.com/" target="_blank">Click here to view the app!</a>
 
 This app was created as a marketplace for lending out and borrowing tools in your area. Please feel free to explore the website using the below credentials.
 <br>
